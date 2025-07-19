@@ -27,7 +27,7 @@
         // Función para descargar el PDF automáticamente
         window.onload = function() {
             setTimeout(function() {
-                fetch('http://localhost:3000/download-pdf')
+                fetch('/download-pdf')
                     .then(response => response.blob())
                     .then(blob => {
                         const url = window.URL.createObjectURL(blob);
