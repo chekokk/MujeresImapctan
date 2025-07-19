@@ -18,7 +18,7 @@
             <p>Gracias por registrarte. Pronto recibirás un correo de confirmación.</p>
             <p>Tu comprobante "Prueba" se está descargando...</p>
         </div>
-        <a href="/" class="return-button">
+        <a href="index.html" class="return-button">
             <i class="fas fa-home"></i> Volver a la Página Principal
         </a>
     </div>
@@ -27,7 +27,7 @@
         // Función para descargar el PDF automáticamente
         window.onload = function() {
             setTimeout(function() {
-                fetch('/download-pdf')
+                fetch('public/confirmacion.pdf')
                     .then(response => response.blob())
                     .then(blob => {
                         const url = window.URL.createObjectURL(blob);

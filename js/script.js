@@ -511,7 +511,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
 
                 // Enviar datos al servidor
-                const response = await fetch('/api/submit', {
+                const response = await fetch('api/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Descargar PDF
                     setTimeout(async () => {
                         try {
-                            const pdfResponse = await fetch('/download-pdf');
+                            const pdfResponse = await fetch('public/confirmacion.pdf');
                             if (pdfResponse.ok) {
                                 const blob = await pdfResponse.blob();
                                 const url = window.URL.createObjectURL(blob);
